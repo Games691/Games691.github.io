@@ -37,4 +37,11 @@ if (location.protocol.substr(0, 4) === "file")
 	<script src="scripts/register-sw.js" type="module"></script>
 
 </body>
+// install code before body close tag
+<script async src="https://gamepush.com/sdk/game-score.js?projectId=4&publicToken=xT3RpsJMXpKWHPrTWkv3VBeHJKvCBccT&callback=onGPInit"></script>
+<script>
+    window.onGPInit = (gp) => {
+        // ready
+    };
+</script>
 </html>
