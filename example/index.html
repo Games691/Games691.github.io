@@ -37,10 +37,14 @@ if (location.protocol.substr(0, 4) === "file")
 	<script src="scripts/register-sw.js" type="module"></script>
 
 
-<script async src="https://gamepush.com/sdk/game-score.js?projectId=4&publicToken=xT3RpsJMXpKWHPrTWkv3VBeHJKvCBccT&callback=onGPInit"></script>
+// разместите код перед закрывающим тегом body
+<script async src="https://gamepush.com/sdk/gamepush.js?projectId=576&publicToken=XdxzFj8mJvM7RrcSPlRfludRu21ngFhJ&callback=onGPInit"></script>
 <script>
-    window.onGPInit = (gp) => {
-        // ready
+    window.onGPInit = function (gp) {
+        // Все возможности GamePush доступны здесь
+    }
+</script>
+
     };
 </script>
 // Add GS script url
