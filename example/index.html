@@ -36,12 +36,27 @@ if (location.protocol.substr(0, 4) === "file")
 	<script src="scripts/main.js" type="module"></script>
 	<script src="scripts/register-sw.js" type="module"></script>
 
-</body>
-// install code before body close tag
+
 <script async src="https://gamepush.com/sdk/game-score.js?projectId=4&publicToken=xT3RpsJMXpKWHPrTWkv3VBeHJKvCBccT&callback=onGPInit"></script>
 <script>
     window.onGPInit = (gp) => {
         // ready
     };
 </script>
+// Add GS script url
+<script async src="https://gamepush.com/sdk/game-score.js?projectId=4&publicToken=xT3RpsJMXpKWHPrTWkv3VBeHJKvCBccT&callback=onGPInit"></script>
+<script>
+window.onGPInit = async (gp) => {
+    // Wait while the player syncs with the server
+    await gp.player.ready;
+    // Show the ad preloader and wait until it ends
+    await gp.ads.showPreloader();
+    // Show the sticky banner (then it will update itself)
+    gp.ads.showSticky();
+
+    // You can start the game :)
+};
+</script>
+
+</body>
 </html>
