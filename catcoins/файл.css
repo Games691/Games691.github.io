@@ -1,0 +1,14 @@
+.gp-platform-button {
+   visibility: hidden; 
+}
+.gp-overlay-divider {
+   visibility: hidden; 
+}
+
+.gp-platform-button {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
